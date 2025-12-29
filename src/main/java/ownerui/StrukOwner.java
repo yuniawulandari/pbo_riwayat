@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package kasirui;
+package ownerui;
+import kasirui.*;
 import java.awt.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -24,14 +25,14 @@ import java.time.format.DateTimeFormatter;
  *
  * @author ARY DWIS
  */
-public class Struk extends javax.swing.JFrame {
+public class StrukOwner extends javax.swing.JFrame {
 
     /**
      * Creates new form struk
      */
     static int orderId = 123;
     
-    public Struk(int orderId) {
+    public StrukOwner(int orderId) {
         initComponents();
         this.orderId = orderId;
         loadReceiptData();
@@ -267,7 +268,7 @@ private void loadReceiptData() {
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 8, -1, -1));
 
         jLabel2.setText(" Mande");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 34, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
         jLabel3.setText("Minggu, 28 April 2012");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 34, -1, -1));
@@ -371,9 +372,9 @@ private void loadReceiptData() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Kasir1 kasir = new Kasir1();
-        kasir.setVisible(true);
-        this.dispose();        // TODO add your handling code here:
+        ownerui.Riwayat riwayat = new ownerui.Riwayat();
+        riwayat.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -397,21 +398,23 @@ exportToPdf();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StrukOwner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StrukOwner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StrukOwner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Struk.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(StrukOwner.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Struk(orderId).setVisible(true);
+                new StrukOwner(orderId).setVisible(true);
             }
         });
     }

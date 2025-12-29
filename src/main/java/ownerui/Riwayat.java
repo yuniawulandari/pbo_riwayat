@@ -230,7 +230,7 @@ private void styleActionButton(JButton btn) {
 
     private void openReceipt(int orderId) {
         // Arahkan ke halaman struk (bisa buat kelas baru: StrukFrame)
-        kasirui.Struk struk = new kasirui.Struk(orderId);
+        StrukOwner struk = new StrukOwner(orderId);
         struk.setVisible(true);
     }
     /**
